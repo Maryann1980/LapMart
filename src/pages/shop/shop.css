@@ -1,0 +1,112 @@
+.shopTitle {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 40px;
+    color: #1E2A38;
+}
+
+@media (max-width: 768px) {
+    .shopTitle {
+        font-size: 30px;
+    }
+}
+
+@keyframes slideShow {
+    0% { opacity: 0; transform: translateX(-100%); }
+    50% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(100%); }
+}
+
+.slideshow-text {
+    font-size: 20px;
+    color: #1E2A38;
+    text-align: center;
+    margin-top: 20px;
+    animation: slideShow 5s infinite;
+    max-width: 80%;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .slideshow-text {
+        font-size: 16px;
+    }
+}
+.products {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Dynamic grid */
+    gap: 20px; /* Space between products */
+    place-items: center;
+    padding: 20px;
+}
+
+.product {
+    width: 90%; /* Make it more flexible */
+    max-width: 320px; /* Prevent it from becoming too large */
+    height: auto;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    height: 300px; /* Adjusted for better responsiveness */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product .description {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Add to Cart Button */
+.addToCartBtn {
+    background-color: transparent;
+    border: 2px solid #1E2A38;
+    min-width: 100px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.addToCartBtn:hover {
+    background-color: #1E2A38;
+    color: white;
+    transition: 0.5s ease-in;
+    cursor: pointer;
+}
+
+/* ✅ Mobile & Tablet View */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller columns */
+        gap: 15px;
+    }
+
+    .product img {
+        height: 250px; /* Adjusted height */
+    }
+
+    .product {
+        width: 100%;
+        max-width: 280px; /* Smaller size */
+        margin: 15px;
+    }
+
+    .product .description {
+        font-size: 14px;
+    }
+
+    .addToCartBtn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}

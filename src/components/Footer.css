@@ -1,0 +1,27 @@
+footer {
+    background-color: #1E2A38; /* Change as needed */
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer nav a:hover {
+    text-decoration: underline;
+}

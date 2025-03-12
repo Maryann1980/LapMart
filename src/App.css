@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body, html {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Makes sure the page takes the full viewport height */
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Makes sure the content area stretches */
+}
+
+.main-content {
+    flex: 1; /* This pushes the footer down */
+    padding: 20px; /* Optional: Adds spacing */
+}
+
+.footer {
+    background-color: #1E2A38;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
