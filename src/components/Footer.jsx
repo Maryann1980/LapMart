@@ -6,11 +6,11 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-      <p>&copy;{new Date().getFullYear()} LapMart. All rights reserved.</p>
+      <p>&copy;{new Date().getFullYear()} LapMart.</p>
         <nav>
           <Link to="/">Shop</Link>
             <Link to="/cart">Cart</Link>
-          <a href="www.linkedin.com/in/maryann-ifunanya-igwe-94083331b">Linkedin</a>
+          <a href="https://www.linkedin.com/in/maryann-ifunanya-igwe-94083331b">Linkedin</a>
           <a href="https://github.com/Maryann1980">GitHub</a>
         </nav>
       </div>

@@ -25,20 +25,24 @@ body, html {
 }
 
 .navbar {
-    width: 100%;
-    height: 80px;
-    background-color: #1E2A38;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Add some padding */
+    padding: 10px 20px;
+    background-color: #1E2A38;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .logo {
     font-style: italic;
     color: white;
-    font-size: 24px;
-    margin-left: 20px; /* Push logo to the left */
+    font-size: 22px;
+    margin-left: 15px; /* Push logo to the left */
 }
 
 .links {
@@ -51,19 +55,60 @@ body, html {
     color: white;
     text-decoration: none;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    transition: 0.3s;
+    flex: 1; /* Allow it to take up space */
+    max-width: 350px;
+    margin: 0 15px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    background: transparent;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
 
 /* ✅ Make Navbar Responsive */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: row;
-        height: auto;
         padding: 10px;
     }
 
+    .logo {
+        font-size: 18px;
+    }
+
+    .search-bar {
+        max-width: 200px; /* Reduce width for smaller screens */
+    }
+
     .links {
-        flex-direction: row;
-        gap: 18px;
-        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .links a, .links svg {
+        font-size: 18px;
     }
 }

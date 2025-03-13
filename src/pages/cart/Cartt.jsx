@@ -34,7 +34,7 @@ export const Cart = () => {
         <button>Checkout</button>
       </div>
       ):(
-        <h1>Add to Cart</h1>
+        <h1 style={{ marginTop: "50px" }}>Add to Cart</h1>
       )}
     </div>
   )}
